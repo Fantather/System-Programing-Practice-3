@@ -19,7 +19,7 @@ namespace System_Programing_Practice_3
                 lock (ctx)
                 {
                     number = rnd.Next(0, 100);
-                    ctx.Post(s => pb.Value = number, null);
+                    ctx.Send(s => pb.Value = number, null);
                     Thread.Sleep(100);
                 }
             }
